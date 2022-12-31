@@ -46,6 +46,8 @@ if __name__ == '__main__':
 			Llp,LlpImgs,_ = detect_lp(wpod_net,im2single(Ivehicle),bound_dim,2**4,(240,80),lp_threshold)
 
 			if len(LlpImgs):
+
+				print('Found license plate')
 				Ilp = LlpImgs[0]
 				Ilp = cv2.cvtColor(Ilp, cv2.COLOR_BGR2GRAY)
 				Ilp = cv2.cvtColor(Ilp, cv2.COLOR_GRAY2BGR)
