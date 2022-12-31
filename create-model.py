@@ -98,10 +98,10 @@ if __name__ == '__main__':
 
 	modelf = getattr(sys.modules[__name__],'create_model_' + sys.argv[1])
 	
-	print 'Creating model %s' % sys.argv[1]
+	print ('Creating model %s' % sys.argv[1])
 	model = modelf()
-	print 'Finished'
+	print ('Finished')
 
-	print 'Saving at %s' % sys.argv[2]
+	print ('Saving at %s' % sys.argv[2])
 	save_model(model,sys.argv[2])
 
