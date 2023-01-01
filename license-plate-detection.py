@@ -20,7 +20,7 @@ if __name__ == '__main__':
 	try:
 		
 		input_dir  = sys.argv[1]
-		output_dir = input_dir
+		output_dir = '/home/output'
 
 		lp_threshold = .5
 
@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
 				s = Shape(Llp[0].pts)
 
-				cv2.imwrite('%s/%s_lp.png' % (output_dir,bname),Ilp*255.)
+				cv2.imwrite('/home/output/%s_lp.png' % bname,Ilp*255.)
 				writeShapes('%s/%s_lp.txt' % (output_dir,bname),[s])
 
 	except:
